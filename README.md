@@ -1,4 +1,4 @@
-# transaction_reminder
+# transaction-reminder
 
 Flask Application to send reminders of credit card transaction to your reminder application.
 
