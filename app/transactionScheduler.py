@@ -40,7 +40,7 @@ class TransactionScheduler(object):
 
     def execute(self,app):
         with app.app_context():
-            users = User.query.all()
+            users = User.query.filter_by(googleEmailAccess=True,wunderListAccess=True).all()
 
             for user in users:
 
