@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% block title %}Transaction Reminder{% endblock %}
+{% block content %}
+<div class="container-fluid">
+  {% if current_user.googleEmailAccess and current_user.wunderListAccess %}
+    <div class="row backupInfo">
+      <div class="col-md-12 col-centered">
+        <p>Your inbox is being monitored</p>
+        <div class="lastbackup">
+          <span>Last monitored time : {{ lastBackupTime }}</span>
+        </div>
+      </div>
+    </div>
+  {% else %}
+    <div class="row headRow row-centered">
+      {% if not current_user.googleEmailAccess %}
+        <div class="col-md-6 col-centered">
+          <p>Login to GMail so we can access your emails.</p>
+        </div>
+      {% endif %}
+      {% if not current_user.wunderListAccess %}
+        <div class="col-md-6 col-centered">
+          <p>Login to Wunderlist so we can send you reminders</p>
+        </div>
+      {% endif %}
+    </div>
+    <div class="row loginRow row-centered">
+      {% if not current_user.googleEmailAccess %}
+        <div class="col-md-4 col-centered googleCont">
+          <img src="{{ url_for('static', filename='img/google.png') }}">
+        </div>
+        <div class="col-md-2 col-centered googleCont">
+          <a href="{{ url_for('pages.googleEmailLogin') }}" class="btn btn-success">
+            Login with Google
+          </a>
+        </div>
+      {% endif %}
+      {% if not current_user.wunderListAccess %}
+        <div class="col-md-4 col-centered splitwiseCont">
+          <img src="{{ url_for('static', filename='img/wunderlist.png') }}">
+        </div>
+        <div class="col-md-2 col-centered splitwiseCont">
+          <a href="{{ url_for('pages.wunderListLogin') }}" class="btn btn-success">
+            Login with Wunderlist
+          </a>
+        </div>
+      {% endif %}
+    </div>
+  {% endif %}
+</div>
+{% endblock %}

@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block title %}Transaction Reminder - Login{% endblock %}
+{% block content %}
+  <div class="loginCont">
+    <a href="{{ url_for('pages.googleLogin') }}" class="btn btn-success">
+      Login with Google
+    </a>
+  </div>
+
+{% endblock %}

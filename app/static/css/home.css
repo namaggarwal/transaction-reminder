@@ -1,0 +1,76 @@
+.jumbotron{
+  background: #34495e;
+  color: #48c9b0;
+  text-align: center;
+}
+
+.jumbotron h1{
+  font-size: 48px;
+  font-weight: normal;
+}
+
+.jumbotron p{
+  font-size: 20px;
+}
+
+.loginCont{
+  text-align:center;
+  margin-top:10%;
+}
+
+.backupInfo{
+  font-size: 24px;
+  color:#48c9b0;
+}
+
+.backupInfo .lastbackup{
+  font-size: 28px;
+  color: #34495e;
+  margin-top: 5%;
+}
+
+.footer{
+  position: absolute;
+  bottom: 1%;
+  text-align: center;
+  width: 100%;
+}
+
+.pageerror{
+  text-align: center;
+  font-size: 32px;
+  color: red;
+  margin-top: 5%;
+}
+
+/* centered columns styles */
+.row-centered {
+    text-align:center;
+}
+.col-centered {
+    display:inline-block;
+    float:none;
+    /* reset the text-align */
+    text-align:left;
+    /* inline-block space fix */
+    margin-right:-4px;
+    text-align: center;
+}
+
+.googleCont img{
+  width: 61%;
+}
+
+.splitwiseCont img{
+  width: 50%;
+}
+
+.loginRow{
+  margin-top: 4%;
+}
+
+.headRow{
+  font-size: 16px;
+  color: #34495e;
+  font-weight: bold;
+}
