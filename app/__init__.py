@@ -53,9 +53,8 @@ app.register_blueprint(pages)
 
 
 ### Add Logging ###
-logging.basicConfig()
 app.logger.addHandler(Logger.getAppHandler())
-
+app.logger.setLevel(logging.DEBUG)
 ### Migration ###
 migrate = Migrate(app, db)
 
